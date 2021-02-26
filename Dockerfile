@@ -1,11 +1,11 @@
-FROM amazonlinux:latest
+FROM ubuntu:latest
 
 RUN cat /etc/resolv.conf
 
 RUN echo  " "
 
 #install
-RUN yum install httpd -y
+RUN sudo apt install -y httpd
 
 # configure
 RUN echo "Jenkins Docker Build and Publish " > /var/www/html/index.html
